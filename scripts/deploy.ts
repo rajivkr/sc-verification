@@ -1,4 +1,4 @@
-import hardhat from 'hardhat';
+import { ethers, run } from 'hardhat';
 
 function sleep(ms: number) {
   return new Promise(resolve => setTimeout(resolve, ms));
@@ -9,7 +9,7 @@ async function main() {
   A ContractFactory in ethers.js is an abstraction used to deploy new smart contracts,
   so verifyContract here is a factory for instances of our Verify contract.
   */
-  const verifyContract = await hardhat.ethers.getContractFactory('Verify');
+  const verifyContract = await ethers.getContractFactory('Verify');
 
   // deploy the contract
   const deployedVerifyContract = await verifyContract.deploy();
@@ -24,7 +24,7 @@ async function main() {
   await sleep(40000);
 
   // Verify the contract after deploying
-  await hardhat.run('verify:verify', {
+  await run('verify:verify', {
     address: deployedVerifyContract.address,
     constructorArguments: [],
   });
