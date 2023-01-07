@@ -1,0 +1,27 @@
+{
+  "name": "sc-verification",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rajivkr/sc-verification.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rajivkr/sc-verification/issues"
+  },
+  "homepage": "https://github.com/rajivkr/sc-verification#readme",
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "hardhat": "^2.12.5"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^2.0.0"
+  }
+}
